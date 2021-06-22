@@ -1,0 +1,25 @@
+{
+  "name": "student_website",
+  "version": "1.0.0",
+  "description": "browser based student website for eval project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhinav Agarwal",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-memcached": "^1.0.0",
+    "connect-mongodb-session": "^2.2.0",
+    "csurf": "^1.10.0",
+    "express-session": "^1.16.2",
+    "express-validator": "^6.2.0",
+    "mysql2": "^1.7.0",
+    "mysql2-promise": "^0.1.4",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "require": "^2.4.20"
+  }
+}

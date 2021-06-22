@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>
+            Instructor REGESTRATION
+        </title>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/metro-all.min.css">
+		</head>
+		<body>
+         <div class = "row">
+        <div class = "cell-12"><h1>New Instructor Registration</h1></div>
+						<form data-role = "validator" class = "cell-md-12" action="javascript:" data-on-validate-form = 	"registerInst(this)">
+				<div class = "cell-md-7">	   <input name = "ins_name" data-role="input" data-prepend="Full Name:" data-validate="required minlength=6">
+                        <span class="invalid_feedback">
+                Input correct name with min length 6 letters
+            </span></div>
+                     <div class = "cell-12"><br></div>
+             
+                       <div class = "cell-12"><br></div> 
+		<div class = "cell-md-7"> <input name = "email" type = "ins_email" data-role="input" data-prepend="EMAIL:" data-append = "@manipal.edu" data-validate= "required">
+                    <span class="invalid_feedback">
+                Input correct email ID
+            </span></div>
+                     
+					<div class = "cell-12"><br></div>  
+             <div class = "cell-md-8">            
+        <input name = "ins_password"  type = "password" data-role="input" data-prepend="Password:" data-validate = "pattern=^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,16}$"> 
+			<span class="invalid_feedback">
+               Make Sure Password follows above rules 
+            </span>
+			<small class="text-muted">Minimum 6 and maximum 16 characters, at least one UPPERCASE letter, one lowercase letter, 1 number and one speci@l character:</small>
+			
+			</div>
+			
+
+                        <div class = "cell-12"><br></div>
+						
+	<input name = "question" class = "cell-md-7" type = "text" data-role="input" data-prepend="Security Question:" data-validate="required">
+                      <div class = "cell-12"><br></div>  
+<input name = "answer" class = "cell-md-7" type = "text" data-role="input" data-prepend="Security Answer:" data-validate="required">
+                      <div class = "cell-12"><br></div>  					  
+                                
+                        <select name="department" data-role="select" class = "cell-8" data-prepend="Department:" data-validate="required">
+                            
+                                <option value="1">Information and Communication Technology</option>
+                                <option value="2">Computer Science </option>
+                                <option value="3">Electrical</option>
+                        </select>
+						
+                    <br>
+                   
+     <input name ="emp_id" class = "cell-3" data-role="input" data-prepend="Employee ID:" data-validate="required">
+	 <div class = "cell-12"><br></div>
+                <button class = "cell-2 button primary offset-4">Submit</button></form>
+				<button class = "button light cell-2 offset-4" onclick = "window.location.href = '/'">Back</button> 
+        </div>
+        <script src="../js/util/jquery-3.4.1.min.js"></script>
+        <script src="../js/util/metro.min.js"></script>
+       <script src="../js/util/sweetalert2.all.min.js"></script>
+       <script src = "../js/util/include.js"></script>
+	<script src = "../js/registration.js"></script>
+        
+        
+    </body>
+</html>

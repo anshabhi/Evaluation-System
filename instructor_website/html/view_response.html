@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>View Student Response</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/metro-all.min.css">
+</head>
+<body onload="getTest()">
+    <div class = "row">
+        <div id = "stuName" class = "cell-md-4"></div>
+        <div id = "testName" class = "cell-md-4"></div>
+        <div id = "marks" class = "cell-md-4"></div>
+
+        </div>  
+ <div class="grid" id = "response" class = "offset-1">
+No Response Recorded for this test.
+ </div>  
+<div class = "row">
+<button  class="button dark large offset-5" onclick= "window.location.href = '/result'">Back</button>
+</div>
+<script src="../js/util/jquery-3.4.1.min.js"></script>
+<script src="../js/util/metro.min.js"></script>
+<script src="../js/util/sweetalert2.all.min.js"></script>
+<script src = "../js/util/include.js"></script>
+<script src = "../js/view_response.js">
+</script>
+</body>
+</html>

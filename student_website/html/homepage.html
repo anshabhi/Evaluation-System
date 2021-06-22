@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Student Homepage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/metro-all.min.css">
+
+  </head>
+  <body>
+  <div class = "row">
+  <div class = "cell-6"><h3 id = "student_name" class = "fg-cyan"> Hello, Student Name</h3></div>
+  <div class = "cell-4 fg-pink" id = "dat">Date and Time</div>
+  <div class = "cell-2"><button class = "button alert" onclick = "logout()">Logout</button>
+  </div></div>
+  <div class = "cell-12"><br></div> 
+<div class="row">
+        <div class="cell-4 fg-green"><div><h3 class = "c-pointer" onclick = "startTest()"><span class="mif-pencil">Start a Test</div></h3></div>
+        <div class="cell-4 fg-blue "><div><h3 class = "c-pointer" onclick = "window.location.href = 'result'"><span class="mif-history"></span>View Previous Results</h3></div></div>
+    <!--  <div class="cell-4 fg-orange "><div><h3 class = "c-pointer" onclick = "window.location.href = 'request_batch'"><span class="mif-enter"></span>View Interrupted Test</h3></div></div> -->
+   
+   </div>
+	
+   <script src="../js/util/jquery-3.4.1.min.js"></script>
+   <script src="../js/util/metro.min.js"></script>
+  <script src="../js/util/sweetalert2.all.min.js"></script>
+  <script src = "../js/util/include.js"></script>
+ <script src="../js/homepage.js"></script>
+
+  </body>
+</html>

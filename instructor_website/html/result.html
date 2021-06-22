@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            View Student Performance
+        </title>
+		
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../css/metro-all.min.css">
+	<link rel="stylesheet" href="../css/buttons.dataTables.min.css">
+	<link rel="stylesheet" href="../css/jquery.dataTables.min.css">	
+       </head>
+	   <body onload = "fetchResult()">
+	   
+	   <div class = "row">
+			<p class = 'mif-arrow-left c-pointer cell-2 h3' onclick = "window.location.href = 'homepage'"></p>
+	     <div id = "labN" class = "cell-3">
+		</div>
+	<div id = "testN" class = "cell-3"></div>
+	<div id = "max" class = "cell-2"></div>
+<!---	<div class="cell-2"> <button class="button primary default rounded" onclick="demoFromHTML()">Export as PDF</button>
+		<button class="button dark" id="dropdown_toggle_1">Export</button>
+		<div class="pos-relative">
+			<div data-role="dropdown"
+					data-toggle-element="#dropdown_toggle_1">
+				<p class="text-center" onclick = "exportTableToExcel('resTable')">
+					Excel (.xls)
+				</p>
+				<p class="text-center" onclick="demoFromHTML()">
+					PDF
+				</p>
+			</div>
+		</div>
+	
+	
+	</div> -->
+	   <div class = "cell-12"><h1> Responses For all your tests appear here.</h1><h6> Kindly use search feature to filter the required results</h6></div>
+	   <div class="cell-12" id = "resDiv">
+	   
+	   </div></div>
+	   <script src="../js/util/jquery-3.4.1.min.js"></script>
+	   <script src="../js/util/metro.min.js"></script>
+	  <script src="../js/util/sweetalert2.all.min.js"></script>
+	  <script src = "../js/util/include.js"></script>
+	<script src = "../js/result.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/util/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/util/dataTables.buttons.min.js"></script>
+	
+	<script type="text/javascript" language="javascript" src="../js/util/jszip.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/util/pdfmake.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/util/vfs_fonts.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/util/buttons.html5.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../js/util/buttons.print.min.js"></script>
+	  <script src = "../js/util/buttons.colVis.min.js"></script> 
+</body>
+	   </html>

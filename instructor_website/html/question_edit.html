@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset='utf-8' />
+<title>Question Edit Form</title>
+
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/metro-all.min.css">
+</head>
+<body>
+<div class = "row">
+<div class = "cell-4">
+Select the type of Question You want to Edit:
+</div>
+<select id = "stype" data-role="select" class = "cell-6">
+<option> Fill in the blanks</option>
+<option> Multiple Choice</option>
+<option>Descriptive</option>
+</select>
+<div class = "cell-2">
+<button onclick = "loadlist()" class = "button light">OK</button></div>
+</div>
+<br/>
+<div style = "opacity:0" id = "seldiv" class = "row">
+<div class = "cell-4">
+Select the question you want to edit:
+</div>
+<select id = "squestions" data-role = "select" class = "cell-6">
+</select>
+<div class = "cell-2">
+<button type ="button" id = "bquestion" onclick = "loadQuestion()" class = "button">OK</button></div>
+</div>
+<form class = "row no-visible" data-role = "validator" data-on-validate-form = "fitbfn()" action="javascript:" id="fitbform" >
+     <input type ="text" class = "cell-md-10 " id="fitbq" data-role="input" data-prepend="Enter Question Here:" data-validate="required">
+	
+   <!--  <input type ="text" class = "cell-md-4 " id="fitbans" data-role="input" data-prepend="Answer:" data-validate="required"> -->
+	
+     <input type="number" class = "cell-md-3" id= "fitbmarks" data-role="input" data-prepend="Marks:" data-validate="required">
+
+     <button class = "cell-3 button primary">Submit</button>
+	 <div class = "cell-md-1">  <button type="button" onclick="fitbdel()" class = "button alert">Delete</button></div>
+          </form>
+
+<form class = "row no-visible" data-role = "validator" data-on-validate-form = "mcqfn()" action="javascript:" id="mcqform" >
+    <input type ="text" class = "cell-md-10" id="mcqq" data-role="input" data-prepend="Question:" data-validate="required">
+    <input type ="text" class = "cell-md-5" id="mcqopt1" data-role="input" data-prepend="Option 1:" data-validate="required">
+    <input type="text" class = "cell-md-5" id="mcqopt2" data-role="input" data-prepend="Option 2:" data-validate="required">
+  <input type ="text" class = "cell-md-5 " id="mcqopt3" data-role="input" data-prepend="Option 3:" data-validate="required">
+       <input type="text" class = "cell-md-5 " id="mcqopt4" data-role="input" data-prepend="Option 4:" data-validate="required" >
+       <input type ="number" class = "cell-md-3 offset-1 " id="mcqcorrect" data-role="input" data-prepend="Correct Option (1-4):" data-validate="required min=1 max=4">
+         <input type="number" class = "cell-md-3 " id="mcqmarks" data-role="input" data-prepend="Marks:" data-validate="required"> 
+       <button class = "button primary cell-3">Submit</button>   
+         <div class = "cell-md-1">  <button type="button" onclick="mcqdel()" class = "button alert">Delete</button></div>
+    </form>
+
+   <form id="descform" class = "row no-visible" data-role = "validator" data-on-validate-form = "descfn()" action="javascript:"> 
+        <div class = "cell-md-10 ">    <input type="text" id="descq" placeholder="Enter Question Here" data-validate="required"/></div>
+        <div class = "cell-md-3 ">    <input type="number" id="descmarks" data-role="input" data-prepend="Marks:" data-validate="required"/></div>
+         <div class = "cell-md-3 ">  <button class = "button light">Submit</button></div>
+     <button type="button" onclick="descdel()" class = "button alert">Delete</button>
+    </form>
+<button onclick = "location.href = 'test_creation'" class = "button primary">Back</button>
+
+<script src="../js/util/jquery-3.4.1.min.js"></script>
+<script src="../js/util/metro.min.js"></script>
+<script src="../js/util/sweetalert2.all.min.js"></script>
+<script src = "../js/util/include.js"></script>
+<script src = "../js/question_edit.js"></script>
+</body>
+
+</html>

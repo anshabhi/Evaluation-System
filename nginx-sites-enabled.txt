@@ -1,0 +1,133 @@
+# Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
+##
+
+# Default server configuration
+#upstream app_instructor {
+#    server 127.0.0.1:3000;
+#    keepalive 8;
+#}
+server {
+        listen 4040 ssl http2;
+        listen [::]:4040 ssl http2;
+        #listen 80;
+
+        ssl_certificate /etc/nginx/local-ssl/localhost.crt;
+        ssl_certificate_key  /etc/nginx/local-ssl/localhost.key;
+        server_name localhost;
+
+
+location = /CSRFtoken {proxy_pass http://localhost:3000;}
+
+location = /homepage {proxy_pass http://localhost:3000;}
+location = /registration {proxy_pass http://localhost:3000;}
+
+location = /question_edit {proxy_pass http://localhost:3000;}
+location = /view_response {proxy_pass http://localhost:3000;}
+location = /result {proxy_pass http://localhost:3000;}
+location = /test_creation {proxy_pass http://localhost:3000;}
+
+location = /auth {proxy_pass http://localhost:3000;}
+location = /toggleStatusQuery {proxy_pass http://localhost:3000;}
+location = /deleteTestQuery {proxy_pass http://localhost:3000;}
+location = /toggleStatus {proxy_pass http://localhost:3000;}
+location = /deleteTest {proxy_pass http://localhost:3000;}
+location = /labList {proxy_pass http://localhost:3000;}
+location = /testList {proxy_pass http://localhost:3000;}
+location = /register {proxy_pass http://localhost:3000;}
+location = /chooseEvalQuery {proxy_pass http://localhost:3000;}
+location = /labDet {proxy_pass http://localhost:3000;}
+location = /testInsert {proxy_pass http://localhost:3000;}
+location = /logout {proxy_pass http://localhost:3000;}
+location = /resultQ {proxy_pass http://localhost:3000;}
+location = /getTest {proxy_pass http://localhost:3000;}
+location = /getResponse {proxy_pass http://localhost:3000;}
+location = /evalSubmit {proxy_pass http://localhost:3000;}
+location /mif/ {
+	root /home/eval/Documents/Evaluation-System-Project/instructor_website;
+    #index /html/login.html;
+    try_files $uri $uri/ =404;
+	
+    # source: https://stackoverflow.com/a/15467555/8436941
+  }
+
+location ~ ^/(images|javascript|js|css|flash|media|static|font)/  {
+      root   /home/eval/Documents/Evaluation-System-Project/instructor_website;
+	    
+	try_files $uri $uri/ =404;     
+ }
+
+    # pass requests for dynamic content to rails/turbogears/zope, et al
+    location = / {
+      proxy_pass      http://localhost:3000;
+    }
+
+}
+server {
+        listen 4000 ssl http2;
+        listen [::]:4000 ssl http2;
+        #listen 80;
+       
+        ssl_certificate /etc/nginx/local-ssl/localhost.crt;
+        ssl_certificate_key  /etc/nginx/local-ssl/localhost.key;
+        server_name localhost;
+
+
+ location = /CSRFtoken {proxy_pass http://localhost:3002;}
+
+location = /homepage {proxy_pass http://localhost:3002;}
+location = /registration {proxy_pass http://localhost:3002;}
+location = /test_answer {proxy_pass http://localhost:3002;}
+location = /result {proxy_pass http://localhost:3002;}
+location = /request_batch {proxy_pass http://localhost:3002;}
+#api
+location = /auth {proxy_pass http://localhost:3002;}
+location = /logout {proxy_pass http://localhost:3002;}
+location = /testList {proxy_pass http://localhost:3002;}
+location = /register {proxy_pass http://localhost:3002;}
+location = /resultQ {proxy_pass http://localhost:3002;}
+
+location = /getTest {proxy_pass http://localhost:3002;}
+location = /submitFITB {proxy_pass http://localhost:3002;}
+location = /submitMCQ {proxy_pass http://localhost:3002;}
+location = /submitDESC {proxy_pass http://localhost:3002;}
+location = /submitResult {proxy_pass http://localhost:3002;}
+location = /getBatch {proxy_pass http://localhost:3002;}
+location = /regBatch {proxy_pass http://localhost:3002;}
+location /mif/ {
+	root /home/eval/Documents/Evaluation-System-Project/instructor_website;
+    #index /html/login.html;
+    try_files $uri $uri/ =404;
+	
+    # source: https://stackoverflow.com/a/15467555/8436941
+  }
+location /wPaint/ {
+	    autoindex on;
+	root /home/eval/Documents/Evaluation-System-Project/instructor_website;
+    #index /html/login.html;
+    try_files $uri $uri/ =404;
+	
+    # source: https://stackoverflow.com/a/15467555/8436941
+  }
+
+
+location ~ ^/(images|javascript|js|css|flash|media|static|font)/  {
+      root   /home/eval/Documents/Evaluation-System-Project/student_website;
+	    
+	try_files $uri $uri/ =404;     
+ }
+
+    # pass requests for dynamic content to rails/turbogears/zope, et al
+    location = / {
+      proxy_pass      http://localhost:3002;
+    }
+
+
+}
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+	server_name sname;
+	return 301 https://$host:$request_uri;
+}
+
+

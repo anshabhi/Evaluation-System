@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> Test Answer Page</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- wColorPicker -->
+<link rel="Stylesheet" type="text/css" href="../js/lib/wColorPicker.min.css" />
+ <link rel="stylesheet" href="../css/metro-all.min.css"> 
+<link rel="Stylesheet" type="text/css" href="../js/wPaint.min.css" />
+
+
+
+</head>
+<body onload = "loadQuestions()">
+<div class = "row">
+<div id = "testName" class = "cell-2"></div>
+<div class = "cell-3" id = "timerDIV"></div>
+<div class = "cell-2">Jump Question:<select class = "cell-3 offset-1" id = "selQues" onchange = "updateQuestion(this.selectedIndex)">
+</select></div>
+<div class = "cell-2">    <button onclick = "submit()" class = "button warning">Submit Test</button></div>
+
+</div>
+<div id = "qnum" class = "cell-1">
+</div>
+    <div id="fitb" class = "row no-visible">
+        
+       <div class = "cell-md-4"> <input type ="text" data-role="input" id="fitbq" data-prepend="Question:" disabled/></div>
+       <div class = "cell-md-6"> <input type ="text" data-role="input" data-prepend="Enter Answer:" id="fitbans" placeholder="Enter Answer Here" onchange = "fitbfn()" /></div>
+       <div class = "cell-md-2"> <input type="number" data-role="input" data-prepend="Marks:" id= "fitbmarks" disabled/></div>
+     
+           
+    </div>
+	<br>
+    <div id="mcq" class = "row mt-20-minus no-visible">
+        
+        
+        <div class = "cell-md-10"><input type ="text" id="mcqq" data-role="input" data-prepend="Question:" placeholder="Question Appears Here" disabled/></div>
+		<div class = "cell-md-2"><input type="number" data-role="input" data-prepend="Marks:"  id="mcqmarks" disabled/></div>
+ <div class = "cell-md-3"><input type ="radio" id="mcqopt1" data-role="radio" value = '1' name = "mcq"  onchange = "mcqfn()"/><label name = "mcql"></label></div>
+ <div class = "cell-md-3">       <input type="radio" id="mcqopt2" data-role="radio" value = '2' name = "mcq"  onchange = "mcqfn()"/><label name = "mcql"></label></div>
+ <div class = "cell-md-3">       <input type ="radio" id="mcqopt3" data-role="radio" value = '3' name = "mcq"  onchange = "mcqfn()"/><label name = "mcql"></label></div>
+ <div class = "cell-md-3">       <input type="radio" id="mcqopt4" data-role="radio" value = '4' name = "mcq"  onchange = "mcqfn()"/><label name = "mcql"></label></div>
+         
+    </div>
+	<br>
+    <div id="desc" class = "row mt-20-minus no-visible">
+        
+    <div class = "cell-md-10"><input type="text" id="descq" data-role="input" data-prepend="Question:" disabled/></div>
+	<div class = "cell-md-2"><input type="number" data-role="input" data-prepend="Marks:" id="descmarks" disabled/></div>
+    <div class = "cell-md-12"> <textarea id="desca" data-role="textarea" data-prepend="Enter Answer Here:" onchange = "descfn()"></textarea>
+        <p class="text-small">Optional: Add Diagram</p>
+    </div>
+   
+    <div class = "cell-md-12 border mt-2-minus bd-cyan" id="wPaint" style="position:relative; width:800px; height:400px; margin:70px auto 20px auto;"></div>
+          
+    </div>
+
+     <br>
+    <div id="proceed" class = "row mt-15-minus">
+	<div class = "cell-2 offset-2">	<button id = "prevb" class = "button dark large" onclick = "jumpfn('prev')"> Previous</button></div>
+	
+	
+    <div class = "cell-2 offset-2">	<button id = "nextb" onclick = "jumpfn('next')" class = "button dark large"> Next</button></div>   
+    </div>
+
+
+    <script type="text/javascript" src="../js/lib/jquery.1.10.2.min.js"></script>
+    <script src="../js/util/metro.min.js"></script>
+   <script src="../js/util/sweetalert2.all.min.js"></script>
+   <script src = "../js/util/include.js"></script>
+   <script type="text/javascript" src="../js/lib/jquery.ui.core.1.10.3.min.js"></script>
+   <script type="text/javascript" src="../js/lib/jquery.ui.widget.1.10.3.min.js"></script>
+   <script type="text/javascript" src="../js/lib/jquery.ui.mouse.1.10.3.min.js"></script>
+   <script type="text/javascript" src="../js/lib/jquery.ui.draggable.1.10.3.min.js"></script>
+   <script type="text/javascript" src="../js/wPaint.min.js"></script>
+   <script type="text/javascript" src="../js/plugins/main/wPaint.menu.main.min.js"></script>
+   <script type="text/javascript" src="../js/plugins/text/wPaint.menu.text.min.js"></script>
+   <script type="text/javascript" src="../js/plugins/shapes/wPaint.menu.main.shapes.min.js"></script>
+   <script type="text/javascript" src="../js/plugins/file/wPaint.menu.main.file.min.js"></script>
+
+   <script type="text/javascript" src="../js/lib/wColorPicker.min.js"></script>
+<script src = "../js/test_answer.js"></script>
+   
+	
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            STUDENT REGESTRATION
+        </title>
+		
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/metro-all.min.css">
+       </head>
+	   <body>
+        <div class = "row">
+        <div class = "cell-12"><h1>	<span class = "mif-arrow-left c-pointer" onclick = "history.back()"></span>New Student Registration</h1></div>
+						<form data-role = "validator" class = "cell-md-12" action="javascript:" data-on-validate-form = "registerStudent(this)">
+				<div class = "cell-md-7">	   <input name = "stu_name" data-role="input" data-prepend="Full Name:" data-validate="required minlength=6">
+                        <span class="invalid_feedback">
+                Input correct name with min length 6 letters
+            </span></div>
+                     <div class = "cell-12"><br></div>
+                        
+               <div class = "cell-md-7"><input name = "reg_no"  data-role="input" data-prepend="Registration Number:" type = "number" data-validate="required length=9">
+						    <span class="invalid_feedback">
+                Input correct reg no with length 9 integers
+            </span></div>
+                       <div class = "cell-12"><br></div> 
+		<div class = "cell-md-7"> <input name = "student_email" type = "email" data-role="input" data-prepend="EMAIL:" data-append = "@learner.manipal.edu" data-validate= "required">
+                    <span class="invalid_feedback">
+                Input correct email ID
+            </span></div>
+                     
+					<div class = "cell-12"><br></div>  
+             <div class = "cell-md-8">            
+        <input name = "student_password"  type = "password" data-role="input" data-prepend="Password:" data-validate = "pattern=^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,16}$"> 
+			<span class="invalid_feedback">
+               Make Sure Password follows above rules 
+            </span>
+			<small class="text-muted">Minimum 6 and maximum 16 characters, at least one UPPERCASE letter, one lowercase letter, 1 number and one speci@l character:</small>
+			
+			</div>
+			
+
+                        <div class = "cell-12"><br></div>
+				<div class = "cell-md-7"> 		
+	<input name = "student_question" type = "text" data-role="input" data-prepend="Security Question:" data-validate="required">
+	<span class="invalid_feedback">
+               Please Enter Your Security Question
+            </span></div>
+                      <div class = "cell-12"><br></div>  
+					  <div class = "cell-md-7"> 
+<input name = "student_answer" type = "text" data-role="input" data-prepend="Security Answer:" data-validate="required">
+<span class="invalid_feedback">
+               Please enter you Security Question Answer
+            </span>			
+			<small class="text-muted">Kindly remember your Security Question and Answer. This will help you in securing access to your account</small>
+				</div>
+                      <div class = "cell-12"><br></div>  					  
+                     
+                         <div class = "cell-12"><br></div>
+                         
+                         </div>
+						 <div class = "row">
+                      
+                <button class = "cell-2 offset-4 button primary">Submit</button></form></div>
+       
+<script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/metro.min.js"></script>
+	<script src="js/sweetalert2.all.min.js"></script>
+	<script src = "js/registration.js"></script>
+       </body>
+	   </html>

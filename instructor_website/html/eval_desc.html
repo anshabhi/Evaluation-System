@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/metro-all.min.css">
+</head>
+<body onload = "loadQuestions()">
+<div class = "row">
+<div id = "qnum" class = "cell-md-1">
+</div>
+<div id = "stuName" class = "cell-md-2"></div>
+<div id = "testName" class = "cell-md-2"></div>
+<div class = "cell-md-1" id = "attempt"></div>
+<div class = "cell-md-2">Jump Question:<select id = "selQues" onchange = "updateQuestion(this.selectedIndex)">
+</select></div></div>   
+    <div id="desc">
+        <p id="descform">
+       <div class = "cell-md-12">     <input type="text" id="descq" data-role="input" data-prepend="Question:" disabled/></div>
+	   <br>
+		<div class = "cell-md-12">   <textarea id="desca" data-role="textarea" data-prepend="Response:" ></textarea></div>
+		<br>
+		<div class = "cell-md-12">   <input type="number" id="descmaxm" data-role="input" data-prepend="Maximum Marks:" disabled/></div>
+		<br>
+      <div class = "cell-md-6"> <input type="number" id="descmarks" data-role="input" data-prepend="Please Award Marks:" onchange = "descfn()"/></div>
+          
+        </p>
+    </div>
+
+<div id="proceed" class = "row">
+	<div class = "cell-2 offset-2">	<button id = "prevb" class = "button dark outline large" onclick = "jumpfn('prev')"> Previous</button></div>
+	
+    <div class = "cell-2 offset-2">    <button onclick = "submitTest()" class = "button warning">Submit Evaluation</button></div>
+	
+    <div class = "cell-2 offset-2">	<button id = "nextb" onclick = "jumpfn('next')" class = "button dark outline large"> Next</button></div>   
+    </div>
+<div class = "row">
+<p class = "offset-1">Please remember to submit the responses. Without submitting, the result will not be updated in the Database.</p>
+</div>
+<script src="../js/util/jquery-3.4.1.min.js"></script>
+<script src="../js/util/metro.min.js"></script>
+<script src="../js/util/sweetalert2.all.min.js"></script>
+<script src = "../js/util/include.js"></script>
+<script src = "../js/eval_desc.js">
+</script>
+</body>
+</html>

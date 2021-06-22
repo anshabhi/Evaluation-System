@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Register For New Batch
+        </title>
+		
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/metro-all.min.css">
+	
+		</head>
+		<body onload = "fetchBatch()">
+<div class = "cell-12"><h1><span class = "mif-arrow-left c-pointer" onclick = "history.back()"></span> Register For A New Batch</h1></div>        
+		<form data-role = "validator" class = "row" action="javascript:" data-on-validate-form = "regCheck(this)">    
+		<div class = "cell-12"><br></div> 
+          <div class = "cell-3 offset-1 "> <input id = "batch" type = "number" data-role="input" data-prepend="Batch ID:" data-validate="required">
+           </div>    
+
+        <div class = "cell-3 offset-1"><input id = "rno" data-role="input" data-prepend="Roll No:" type = "number" data-validate="required">
+        </div>  
+                                  
+            <div class = "cell-2 offset-1"><button class = "button primary">Submit</div>
+		</form>
+		<div class = "cell-12"><br><br><h3>Batches that you have already registered for appear here.</h3></div> 
+		<div class = "cell-12" id = "subTable">
+		
+		</div>
+        <script src="../js/util/jquery-3.4.1.min.js"></script>
+        <script src="../js/util/metro.min.js"></script>
+       <script src="../js/util/sweetalert2.all.min.js"></script>
+       <script src = "../js/util/include.js"></script>
+     <script src = "../js/request_batch.js"></script>
+        </body>
+
+</html>

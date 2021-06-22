@@ -1,0 +1,39 @@
+ location /CSRFtoken {proxy_pass http://localhost:3000;}
+
+location /homepage {proxy_pass http://localhost:3000;}
+location /registration {proxy_pass http://localhost:3000;}
+location /choose_eval {proxy_pass http://localhost:3000;}
+location /question_edit {proxy_pass http://localhost:3000;}
+location /eval_desc {proxy_pass http://localhost:3000;}
+location /result {proxy_pass http://localhost:3000;}
+location /test_creation {proxy_pass http://localhost:3000;}
+location /test_updation {proxy_pass http://localhost:3000;}
+location /auth {proxy_pass http://localhost:3000;}
+location /logout {proxy_pass http://localhost:3000;}
+location /toggleStatusQuery {proxy_pass http://localhost:3000;}
+location /deleteTestQuery {proxy_pass http://localhost:3000;}
+location /toggleStatus {proxy_pass http://localhost:3000;}
+location /deleteTest {proxy_pass http://localhost:3000;}
+location /labList {proxy_pass http://localhost:3000;}
+location /testList {proxy_pass http://localhost:3000;}
+location /register {proxy_pass http://localhost:3000;}
+location /chooseEvalQuery {proxy_pass http://localhost:3000;}
+location /labDet {proxy_pass http://localhost:3000;}
+location /testInsert {proxy_pass http://localhost:3000;}
+location /register {proxy_pass http://localhost:3000;}
+location /chooseEvalQuery {proxy_pass http://localhost:3000;}
+location /testInsert {proxy_pass http://localhost:3000;}
+location /resultQ {proxy_pass http://localhost:3000;}
+location /{
+    root /home/abhinav/Documents/Evaluation-System-Project/instructor_website;
+    index /html/login.html;
+    try_files $uri $uri/ =404;
+	
+    # source: https://stackoverflow.com/a/15467555/8436941
+  }
+
+
+# if ($request_uri = /CSRFtoken|/homepage|/registration|/choose_eval|/question_edit|/eval_desc|
+/result|/test_creation|/test_updation|/auth|/logout|/toggleStatusQuery|/deleteTestQuery
+|/toggleStatus|/deleteTest|/labList|/testList|/register|/chooseEvalQuery
+|/labDet|/testInsert|/resultQ)

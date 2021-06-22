@@ -1,0 +1,30 @@
+{
+  "name": "instructor_website",
+  "version": "1.0.0",
+  "description": "browser based instructor website for eval project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "author": "Abhinav Agarwal",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-memcached": "^1.0.0",
+    "connect-mongodb-session": "^2.2.0",
+    "csurf": "^1.10.0",
+    "express-session": "^1.16.2",
+    "express-validator": "^6.2.0",
+    "memcache": "^0.3.0",
+    "mysql2": "^1.7.0",
+    "node-cache": "^5.1.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "require": "^2.4.20",
+    "snyk": "^1.236.0"
+  },
+  "snyk": true
+}

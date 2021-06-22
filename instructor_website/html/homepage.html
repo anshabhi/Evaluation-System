@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Instructor Homepage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/metro-all.min.css">
+
+  </head>
+  <body>
+  <div class = "row">
+  <div class = "cell-6"><h1 class = "fg-cyan" id = "ins_name"> Hello, Instructor Name</h1></div>
+  <div class = "cell-4 fg-pink" id = "dat">Date and Time</div>
+   <div class = "cell-2"><button class = "button alert" onclick = "logout()">Logout</button>
+  </div>
+  <br>
+<div class="row">
+        <div class="cell-3 fg-green offset-1"><div><h3 class = "c-pointer" onclick = "window.location.href = 'test_creation'"><span class="mif-add">Create a New Test</div></h3></div>
+        <div class="cell-3 fg-indigo" ><div><h3 onclick = "startTest(1)" class = "c-pointer"><span class="mif-pencil"></span>
+Toggle Test Live Status</h3></div></div>
+
+<div class="cell-3 fg-orange"><div><h3 onclick = "startTest(2)" class = "c-pointer"><span class="mif-cross"></span>
+Delete An Existing Test</h3></div></div>
+<br>
+		<div class="cell-5 offset-1 fg-pink" onclick = "getLabList()"><div><h3 class = "c-pointer"><span class="mif-done_all"></span>
+View and Evaluate Student Performance</h3></div></div>
+
+<div class="cell-5 offset-1 fg-yellow" onclick = "getLabList2()"><div><h3 class = "c-pointer"><span class="mif-server"></span>
+  View Student Status</h3></div></div>
+
+
+    </div>
+    <script src="../js/util/jquery-3.4.1.min.js"></script>
+    <script src="../js/util/metro.min.js"></script>
+   <script src="../js/util/sweetalert2.all.min.js"></script>
+   <script src = "../js/util/include.js"></script>
+	<script src="../js/homepage.js"></script>
+
+  </body>
+</html>

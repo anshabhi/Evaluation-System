@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <title>Test Creation Form</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/metro-all.min.css">
+    
+	</head>
+
+<body onload="initialize()">
+<br>
+<div class = "row" onchange = "testDetfn(1)">
+
+<input class = "cell-md-3" type ="text" id="testName" data-role="input" data-prepend="Test Name:" />
+<input  type="date" id = "dateV"  class = 'cell-md-2'>
+<div id = 'labSubjDiv' class = 'cell-md-3'></div>
+<input class = "cell-md-3" type ="number" id="Tduration" data-role="input" data-prepend="Duration (in minutes)" min = "1" />
+<input class = "cell-md-1" type="checkbox" data-role="switch" data-caption="Live" id = "liveS"/>
+
+</div>
+<br>
+<div class = "offset-1">
+<div class = "cell-6">  <button onclick="setVisible('fitb');" class = "button dark">+</button> Add a Fill in the blank question
+  </div> 
+    
+      <form class = "row no-visible" data-role = "validator" data-on-validate-form = "fitbfn()" action="javascript:" id="fitb" >
+     <input type ="text" class = "cell-md-10 " id="fitbq" data-role="input" data-prepend="Enter Question Here:" data-validate="required">
+	
+  <!--   <input type ="text" class = "cell-md-4 " id="fitbans" data-role="input" data-prepend="Answer:" data-validate="required"> -->
+
+     <input type="number" class = "cell-md-3" id= "fitbmarks" data-role="input" data-prepend="Marks:" data-validate="required">
+
+     <button class = "cell-3 button primary">Submit</button>
+          </form></div>
+    <br>
+    <div class = "offset-1">
+    <div class = "cell-6"> <button onclick="setVisible('mcq');" class = "button dark">+</button> Add a multiple choice question</div>
+        <form class = "row no-visible" data-role = "validator" data-on-validate-form = "mcqfn()" action="javascript:" id="mcq" >
+    <input type ="text" class = "cell-md-10" id="mcqq" data-role="input" data-prepend="Question:" data-validate="required">
+    <input type ="text" class = "cell-md-5" id="mcqopt1" data-role="input" data-prepend="Option 1:" data-validate="required">
+    <input type="text" class = "cell-md-5" id="mcqopt2" data-role="input" data-prepend="Option 2:" data-validate="required">
+  <input type ="text" class = "cell-md-5 " id="mcqopt3" data-role="input" data-prepend="Option 3:" data-validate="required">
+       <input type="text" class = "cell-md-5 " id="mcqopt4" data-role="input" data-prepend="Option 4:" data-validate="required" >
+       <input type ="number" class = "cell-md-3 offset-1 " id="mcqcorrect" data-role="input" data-prepend="Correct Option (1-4):" data-validate="required min=1 max=4">
+         <input type="number" class = "cell-md-3 " id="mcqmarks" data-role="input" data-prepend="Marks:" data-validate="required"> 
+       <button class = "button primary cell-3">Submit</button>   
+         
+    </form></div>
+	<br>
+	<div class = "offset-1">
+    
+    <div class = "cell-6">    <button onclick="setVisible('desc');" class = "button dark">+</button> Add a Descriptive Question</div>
+      <form id="desc" class = "row no-visible" data-role = "validator" data-on-validate-form = "descfn()" action="javascript:"> 
+        <div class = "cell-md-10 ">    <input type="text" id="descq" data-role="input" data-prepend="Enter Question Here:" data-validate="required"/></div>
+        <div class = "cell-md-3 ">    <input type="number" id="descmarks" data-role="input" data-prepend="Marks:" data-validate="required"/></div>
+         <div class = "cell-md-3 ">  <button class = "button light">Submit</button></div>
+    
+    </form>
+	</div>
+
+ <p id = "status" class = "offset-1">
+ </p><br>
+    <div id="proceed" class = "row">
+	
+  <div class = "cell-md-3 offset-1"><button id = "submitButton" onclick = "submit()" class = "button warning" disabled>Create Test</button></div>
+  <div class = "cell-md-3 offset-1"><button onclick = "location.href = 'question_edit'" class = "button yellow">View & Edit Questions</button></div>
+  <button onclick = "location.href = 'homepage'" class = "cell-md-2 offset-1 button primary">Back</button>
+
+    </div>
+    <script src="../js/util/jquery-3.4.1.min.js"></script>
+    <script src="../js/util/metro.min.js"></script>
+   <script src="../js/util/sweetalert2.all.min.js"></script>
+   <script src = "../js/util/include.js"></script>
+	<script src ="../js/test_creation.js"></script>
+</body>
+</html>

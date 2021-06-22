@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            LOGIN SYSTEM
+        </title>
+		
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/metro-all.min.css">
+	
+		</head>
+		<body>
+        <div class = "row">
+        <div class = "cell-6 offset-3">
+            
+          <h2>  Welcome to Evaluation system instructor portal</h2>
+        </div>
+		</div>
+		<div> 
+        
+            
+          <form data-role = "validator" class = "cell-md-12" action="javascript:" data-on-validate-form = 	"loginCheck()">     
+          <div class = "cell-md-4 offset-4"> <input id = "username" type = "text" data-role="input" data-prepend="Email:" data-append="@manipal.edu" data-validate="required">
+           <span class="invalid_feedback">
+                Please Enter Email
+            </span>  </div>    
+
+                 <div class = "cell-12"><br></div> 
+        <div class = "cell-md-4 offset-4"><input id = "password" data-role="input" data-prepend="Password:" type = "password" data-validate = "pattern=^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,16}$">
+           <span class="invalid_feedback">
+               Invalid Password
+            </span>   </div>  
+                      
+            
+            </div>
+			<div class = "row">
+    <div class = "cell-12"><br></div>        
+            <div class = "cell-md-2 offset-1"><button class = "button primary">Login</div></form>   
+        </div> 
+        </body>
+        <script src="../js/util/jquery-3.4.1.min.js"></script>
+        <script src="../js/util/metro.min.js"></script>
+       <script src="../js/util/sweetalert2.all.min.js"></script>
+       <script src = "../js/util/include.js"></script>
+  <script src = "../js/login.js"></script>
+
+    
+</html>

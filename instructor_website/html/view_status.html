@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            View Student Status
+        </title>
+		
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/metro-all.min.css">
+       </head>
+	   <body onload = "fetchStatus()">
+	   
+	   <div class = "row">
+			<p class = 'mif-arrow-left c-pointer cell-2 h3' onclick = "window.location.href = 'homepage'"></p>
+	     <div id = "labN" class = "cell-10">
+		</div>
+	   <div class = "cell-8"><h2> Current Status of all your students appears here</h2></div>
+	<div class="cell-3"><h3 class="c-pointer" onclick="fetchStatus()"><span class="mif-refresh"></span>Refresh</h3></div>
+	
+	   <div class="cell-12" id = "resTable">
+	   
+	   </div></div>
+	   <script src="../js/util/jquery-3.4.1.min.js"></script>
+	   <script src="../js/util/metro.min.js"></script>
+	  <script src="../js/util/sweetalert2.all.min.js"></script>
+	  <script src = "../js/util/include.js"></script>
+	<script src = "../js/view_status.js"></script>
+	
+	   </body>
+	   </html>
