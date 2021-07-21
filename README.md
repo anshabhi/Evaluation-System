@@ -50,7 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Live Demo][product-screenshot]]()
 
 Evaluation System is a full featured production ready electronic testing system which provides a platform for teachers to conduct online tests efficiently. The system has been built with multiple optimizations and measures to amplify the performance while reducing the scope for malpractices. The various features available for teachers are:
 
